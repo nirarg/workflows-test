@@ -1,0 +1,11 @@
+name: PR label commands
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  label-commands:
+    uses: your-org/github-workflows/.github/workflows/pr-label-commands.yml@main
+    with:
+      allowed-labels: '["ready-for-review","hold","work-in-progress"]'
